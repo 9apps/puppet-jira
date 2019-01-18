@@ -63,6 +63,8 @@
 <% else -%>
                    redirectPort="<%= @tomcat_https_port%>"
 <% end -%>
+                   relaxedPathChars="[]|"
+                   relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;"
 <% if @proxy -%>
 <%   @proxy.sort.each do |key,value| -%>
                    <%= key %> = <%= "\'#{value}\'" %>
